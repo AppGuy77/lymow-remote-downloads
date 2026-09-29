@@ -9,6 +9,16 @@ Dock. At home through a QR code, and from anywhere through your own permanent aw
 > firmware or cloud update can change or stop it at any time. You use it at your own risk and accept the
 > [disclaimer](#disclaimer) every time it opens.
 
+## ☕ Donations
+
+**Lymow Remote is free and always will be — donations are appreciated, never expected.**
+
+- **Ko-fi:** https://ko-fi.com/lymow_toolkit
+- **Donatr:** https://donatr.ee/appguy/
+
+Community: https://www.facebook.com/share/g/1Jc7YfPStf/ · Problems or questions:
+[open an issue](https://github.com/AppGuy77/lymow-remote-downloads/issues).
+
 ## ⬇️ Download
 
 **[Latest release →](https://github.com/AppGuy77/lymow-remote-downloads/releases/latest)**
@@ -63,16 +73,6 @@ icon — an iPhone only shows a web page full screen that way. The camera screen
 Lymow Remote installs **next to the Lymow Toolkit** on the same computer without clashing (its own ports 8790 / 8791,
 its own service and settings). Like the official app, it uses the one cloud connection your Lymow account allows:
 while you drive, other apps on the account are paused.
-
-## ☕ Donations
-
-Lymow Remote is free and always will be — donations are appreciated, never expected.
-
-- Ko-fi: https://ko-fi.com/lymow_toolkit
-- Donatr: https://donatr.ee/appguy/
-
-Community: https://www.facebook.com/share/g/1Jc7YfPStf/ · Problems or questions:
-[open an issue](https://github.com/AppGuy77/lymow-remote-downloads/issues).
 
 ## Disclaimer
 
