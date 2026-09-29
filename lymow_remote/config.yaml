@@ -1,0 +1,42 @@
+# Lymow Remote — Home Assistant add-on manifest. The version and the image are stamped by tools/make_ha_addon.sh.
+# Derived from the Lymow Toolkit's add-on (v2.8.1) — see that manifest for the history behind each key. Differences:
+#   * its OWN slug (lymow_remote) -> its own /data, its own /config, its own sidebar entry, next to a Toolkit add-on;
+#   * port / ingress 8790 (the Toolkit keeps 8787) — both use host_network, so they must never share a port;
+#   * NO `services: mqtt` and NO `homeassistant_api`: Lymow Remote runs no Home Assistant bridge, no notifications and
+#     no dashboards (core/product.py REMOTE_ONLY) — an add-on asks for nothing it does not use.
+name: Lymow Remote
+version: "1.0.1"
+slug: lymow_remote
+# PULL, NEVER BUILD: Supervisor pulls this prebuilt multi-arch image (and cleans up the previous one on update).
+image: "ghcr.io/appguy77/lymow-remote"
+environment:
+  LYMOW_HOST: "0.0.0.0"
+  LYMOW_PORT: "8790"
+  LYMOW_RELOAD: "0"
+  PYTHONUNBUFFERED: "1"
+  LYMOW_DATA: /data
+  LYMOW_KEY_DIR: /config/.lymow-key
+description: Drive your Lymow One mower with a live camera — two joysticks, full screen
+url: https://github.com/AppGuy77/lymow-remote-downloads
+arch:
+  - amd64
+  - aarch64
+  - armv7
+init: false
+startup: application
+boot: auto
+# on the HA host's LAN directly: the WiFi camera needs the mower's own network, and many bridges never forward ports
+host_network: true
+ingress: true
+ingress_port: 8790
+ingress_stream: true
+panel_title: Lymow Remote
+panel_icon: mdi:controller
+map:
+  - type: addon_config
+    read_only: false
+ports:
+  8790/tcp: 8790
+ports_description:
+  8790/tcp: Lymow Remote
+webui: http://[HOST]:[PORT:8790]
