@@ -5,7 +5,7 @@
 #   * NO `services: mqtt` and NO `homeassistant_api`: Lymow Remote runs no Home Assistant bridge, no notifications and
 #     no dashboards (core/product.py REMOTE_ONLY) — an add-on asks for nothing it does not use.
 name: Lymow Remote
-version: "1.0.1"
+version: "1.0.2"
 slug: lymow_remote
 # PULL, NEVER BUILD: Supervisor pulls this prebuilt multi-arch image (and cleans up the previous one on update).
 image: "ghcr.io/appguy77/lymow-remote"
