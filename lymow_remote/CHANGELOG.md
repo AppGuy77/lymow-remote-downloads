@@ -1,22 +1,21 @@
-Lymow Remote v1.0.2
+Lymow Remote v1.0.3
 
-What changed since v1.0.1.
+What changed since v1.0.2.
 
 
-- **✕ Close** in the top-bar corner: leaves the mower safe (blades and camera off) and closes Lymow Remote in one tap.
-- **Update dot on ⚙** when a new version is out — on the remote control screen itself.
-- **Commands should always reach the mower on your screen**, also with two screens on two mowers.
-- **The stick and the camera picture should no longer fall behind.** When the picture is more than 1 second late, driving and blades wait for it and the screen says why.
-- **The 💡 should show the real light after the camera starts**, and a parked mower should no longer be woken by background checks.
+- **The camera should open faster on WiFi** — it now starts through Lymow Remote, the same way VLC does, and the camera helper is ready from the start.
+- **The 💡 should show the night light** the mower turns on in remote control, and show it off again when you leave remote control.
+- **Two screens on one mower:** the newest screen gets the picture; the other one says so, and a tap takes it back.
+- **The camera should reconnect cleanly** — short drops wait instead of restarting, and "IP unreachable" should no longer appear while the mower's WiFi works.
+- **Auto follows your Camera settings** (leave WiFi on dropped frames or a weak signal) on every WiFi picture.
 
 
 ## Also in this release
 
-- Every language should be as fast as English.
-- iPhone: the faster WiFi picture. On a plain `http://` address an iPhone uses 4G and says why.
-- Touchscreen computers get the computer layout; no control sits under a phone's camera cutout or home indicator.
-- "Touch to start camera" works between the two sticks, and the ⚙ sheet's Close is reachable on an upright iPhone.
-- Lymow Remote writes no log files, so nothing can fill your disk.
+- Camera messages are a few words. The full reason and a **Network** line (the mower's WiFi name, its address and this computer's) are in ⚙ → Camera.
+- When WiFi keeps failing while the network is fine, the camera stops retrying after three tries and offers a tap to retry.
+- Progress on the camera bar is the mower's own number, shown only while it mows.
+- Commands, the camera and the mower's details should always stay with the mower on your screen.
 
 ## ☕ Donations
 
@@ -27,10 +26,10 @@ Lymow Remote is free and always will be — donations are appreciated, never exp
 
 ## Install
 
-- **Windows:** `LymowRemoteSetup-v1.0.2.msi`
-- **Ubuntu / Linux:** `lymow-remote-ubuntu-v1.0.2.tar.gz`
-- **macOS:** `lymow-remote-mac-v1.0.2.tar.gz`
-- **Docker:** `lymow-remote-docker-v1.0.2.tar.gz`, or the image `ghcr.io/appguy77/lymow-remote:1.0.2` (also `appguy77/lymow-remote` on Docker Hub)
+- **Windows:** `LymowRemoteSetup-v1.0.3.msi`
+- **Ubuntu / Linux:** `lymow-remote-ubuntu-v1.0.3.tar.gz`
+- **macOS:** `lymow-remote-mac-v1.0.3.tar.gz`
+- **Docker:** `lymow-remote-docker-v1.0.3.tar.gz`, or the image `ghcr.io/appguy77/lymow-remote:1.0.3` (also `appguy77/lymow-remote` on Docker Hub)
 - **Home Assistant:** add `https://github.com/AppGuy77/lymow-remote-downloads` to the Add-on Store's repositories, then install **Lymow Remote**.
 
 Already installed? Press **Install update** in ⚙ → Updates.
