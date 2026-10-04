@@ -1,20 +1,22 @@
-Lymow Remote v1.0.4
+Lymow Remote v1.0.7
 
-What changed since v1.0.3.
+What changed since v1.0.4.
 
 
-- **The arrow keys drive the mower** on a computer, like the joystick. The first arrow press asks for a sensitivity — 1 light, 2 middle or 3 full — and you can press 1, 2 or 3 at any time to change it.
-- **When the camera picture ends, the mower stops** — whether the picture drops, restarts or is turned off. Press the stick or an arrow again to drive on.
-- **The WiFi picture should be sharper in fast motion:** once it plays, Lymow Remote moves it to the mower's direct WiFi link in the background, without a gap — and never takes the picture from another screen.
-- **On a plain http:// address, Windows and iPhone should get a clean WiFi picture** — no more green picture on Windows, and an iPhone no longer has to use 4G.
-- **⚙ → Show on camera** chooses which controls stay on the camera picture, separately for phones and computers. On tablets and computers the camera controls are smaller.
+- **The WiFi picture through Lymow Remote should no longer smear into blocks while the mower moves** — at home and through the away address. Every download now carries Lymow Remote's own camera helper, which reads every frame of the mower's camera.
+- **Safer driving:** a move that cannot reach the mower right away is dropped instead of being delivered late, and the stick waits while the mower is not answering or the picture is more than 1.5 seconds old. A stop always goes out.
+- **Arrow keys:** the sensitivity is asked at the first arrow press after every camera start, with your saved level marked. Level 2 is now half of the stick. Tap a choice or press 1, 2 or 3 — and press 1, 2 or 3 at any time while driving to change it at once.
+- **The WiFi picture is kept ready for 5 minutes after you leave,** so coming back should start faster. Stop camera ends it right away.
+- **Camera errors are in plain words** — for example "the mower did not answer on WiFi — it may be out of range or its WiFi signal is weak".
 
 
 ## Also in this release
 
-- If another program already uses Lymow Remote's port (for example Home Assistant's go2rtc or Frigate), Lymow Remote takes the next free one and keeps it; ⚙ shows the address in use. Docker Desktop on Windows and Mac publishes the usual ports.
-- Mower names in any language should work everywhere, and camera errors give the camera helper's own reason.
-- A few short words that stayed in English (the arrow levels, On, OK, reachable) are now translated.
+- In every language, the messages Lymow Remote shows after an action or an error are now translated — sign-in, camera (including the reasons in ⚙ → Camera), away access, updates and the mower's answers. Many were English until now.
+- Every text names Lymow Remote; some still said "the Toolkit".
+- Every size on the screen now follows the screen, including thin borders, gaps and small icons.
+- The camera helper is included in every download; nothing is fetched from the internet for it during install.
+- On Linux and macOS, Lymow Remote should come back by itself if it ever stops.
 
 ## ☕ Donations
 
@@ -25,10 +27,10 @@ Lymow Remote is free and always will be — donations are appreciated, never exp
 
 ## Install
 
-- **Windows:** `LymowRemoteSetup-v1.0.4.msi`
-- **Ubuntu / Linux:** `lymow-remote-ubuntu-v1.0.4.tar.gz`
-- **macOS:** `lymow-remote-mac-v1.0.4.tar.gz`
-- **Docker:** `lymow-remote-docker-v1.0.4.tar.gz`, or the image `ghcr.io/appguy77/lymow-remote:1.0.4` (also `appguy77/lymow-remote` on Docker Hub)
+- **Windows:** `LymowRemoteSetup-v1.0.7.msi`
+- **Ubuntu / Linux:** `lymow-remote-ubuntu-v1.0.7.tar.gz`
+- **macOS:** `lymow-remote-mac-v1.0.7.tar.gz`
+- **Docker:** `lymow-remote-docker-v1.0.7.tar.gz`, or the image `ghcr.io/appguy77/lymow-remote:1.0.7` (also `appguy77/lymow-remote` on Docker Hub)
 - **Home Assistant:** add `https://github.com/AppGuy77/lymow-remote-downloads` to the Add-on Store's repositories, then install **Lymow Remote**.
 
 Already installed? Press **Install update** in ⚙ → Updates.
