@@ -1,11 +1,14 @@
 # Lymow Remote — Home Assistant add-on manifest. The version and the image are stamped by tools/make_ha_addon.sh.
 # Derived from the Lymow Toolkit's add-on (v2.8.1) — see that manifest for the history behind each key. Differences:
 #   * its OWN slug (lymow_remote) -> its own /data, its own /config, its own sidebar entry, next to a Toolkit add-on;
-#   * port / ingress 8790 (the Toolkit keeps 8787) — both use host_network, so they must never share a port;
+#   * port 8790 (the Toolkit keeps 8787) — both use host_network, so they must never share a port. 1.0.4 (R3/R4): the page
+#     takes the first free port of 8790, 8810-8819 (core/ports.py), and the ingress port is ASSIGNED by the Supervisor
+#     (ingress_port: 0 — read from /addons/self/info and bound as a second socket, app/run.py), so another add-on holding
+#     8790 (Frigate, go2rtc, …) can never take the Home Assistant panel down;
 #   * NO `services: mqtt` and NO `homeassistant_api`: Lymow Remote runs no Home Assistant bridge, no notifications and
 #     no dashboards (core/product.py REMOTE_ONLY) — an add-on asks for nothing it does not use.
 name: Lymow Remote
-version: "1.0.3"
+version: "1.0.4"
 slug: lymow_remote
 # PULL, NEVER BUILD: Supervisor pulls this prebuilt multi-arch image (and cleans up the previous one on update).
 image: "ghcr.io/appguy77/lymow-remote"
@@ -28,7 +31,7 @@ boot: auto
 # on the HA host's LAN directly: the WiFi camera needs the mower's own network, and many bridges never forward ports
 host_network: true
 ingress: true
-ingress_port: 8790
+ingress_port: 0
 ingress_stream: true
 panel_title: Lymow Remote
 panel_icon: mdi:controller

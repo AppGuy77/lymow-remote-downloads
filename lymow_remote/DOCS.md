@@ -24,7 +24,9 @@ your home screen for a full-screen icon.
 ## Ports
 
 Lymow Remote uses host networking with the page on **8790** and the WiFi camera relay on **8791** (UDP + TCP). The
-Lymow Toolkit add-on keeps 8787 / 8788, so both can run on the same Home Assistant.
+Lymow Toolkit add-on keeps 8787 / 8788, so both can run on the same Home Assistant. If another add-on already uses one
+of them, Lymow Remote takes the next free port (page 8810-8819, camera 18800-18811); ⚙ → Phone & away from home shows
+the address it uses. The sidebar panel (ingress) runs on a port Home Assistant assigns, so it always works.
 
 ## One connection per account
 
