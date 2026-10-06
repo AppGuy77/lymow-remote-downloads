@@ -1,13 +1,12 @@
-Lymow Remote v1.1.0
+Lymow Remote v1.1.1
 
-What changed since v1.0.7.
+What changed since v1.1.0.
 
 
-- **Drive the mower with a game controller** — an Xbox, PlayStation or MFi pad paired to your phone, tablet or computer. It works just like the on-screen joystick: it moves the mower only while the live camera picture is up, every command names your mower, and the mower stops the moment the picture drops.
-- **The left stick is proportional** (how far you push it is how fast it goes); **the D-pad** drives at the arrow sensitivity you set (a third, half or full), never full-blast. Both are capped by your Max drive speed.
-- **Just grab the pad** — on the Remote screen the camera starts full screen by itself when you move the stick, and the **Start button** turns the camera and the controls on and off. No tapping the screen.
-- **Buttons for everything:** blade speed, raise and lower the deck, drive speed up and down, the speed level, and stop the blades — plus Confirm / Cancel for on-screen menus, so you never have to touch the screen mid-drive.
-- **Most Xbox, PlayStation and MFi controllers work with no setup.** For a different controller, or to choose which buttons do what, set it up once per kind of device in ⚙ → Controller setup. Available in every language.
+- **A game controller turned off and back on should drive again by itself** — within a second, with its saved setup. No need to run Controller setup again.
+- **The controller dropping out stops the mower at once** — if it turns off, runs flat or loses its connection while you drive. Before, the mower could roll on for up to a second.
+- **It never drives off by itself:** when the controller comes back, or you come back to the page, a stick still pushed has to return to center before the mower moves.
+- **Backing out of an on-screen menu with the controller's Cancel button (B) no longer also stops the blades**, and a button still held as a menu closes does nothing.
 
 
 ## ☕ Donations
@@ -19,10 +18,10 @@ Lymow Remote is free and always will be — donations are appreciated, never exp
 
 ## Install
 
-- **Windows:** `LymowRemoteSetup-v1.1.0.msi`
-- **Ubuntu / Linux:** `lymow-remote-ubuntu-v1.1.0.tar.gz`
-- **macOS:** `lymow-remote-mac-v1.1.0.tar.gz`
-- **Docker:** `lymow-remote-docker-v1.1.0.tar.gz`, or the image `ghcr.io/appguy77/lymow-remote:1.1.0` (also `appguy77/lymow-remote` on Docker Hub)
+- **Windows:** `LymowRemoteSetup-v1.1.1.msi`
+- **Ubuntu / Linux:** `lymow-remote-ubuntu-v1.1.1.tar.gz`
+- **macOS:** `lymow-remote-mac-v1.1.1.tar.gz`
+- **Docker:** `lymow-remote-docker-v1.1.1.tar.gz`, or the image `ghcr.io/appguy77/lymow-remote:1.1.1` (also `appguy77/lymow-remote` on Docker Hub)
 - **Home Assistant:** add `https://github.com/AppGuy77/lymow-remote-downloads` to the Add-on Store's repositories, then install **Lymow Remote**.
 
 Already installed? Press **Install update** in ⚙ → Updates.
