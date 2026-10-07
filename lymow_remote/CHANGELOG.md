@@ -1,12 +1,14 @@
-Lymow Remote v1.1.1
+Lymow Remote v1.1.3
 
-What changed since v1.1.0.
+What changed since v1.1.1.
 
 
-- **A game controller turned off and back on should drive again by itself** — within a second, with its saved setup. No need to run Controller setup again.
-- **The controller dropping out stops the mower at once** — if it turns off, runs flat or loses its connection while you drive. Before, the mower could roll on for up to a second.
-- **It never drives off by itself:** when the controller comes back, or you come back to the page, a stick still pushed has to return to center before the mower moves.
-- **Backing out of an on-screen menu with the controller's Cancel button (B) no longer also stops the blades**, and a button still held as a menu closes does nothing.
+- **A picture that falls behind stops the mower on every connection** — on 4G and the direct WiFi link too, a picture more than a second behind stops the stick and the blades, as the relayed WiFi picture always did.
+- **Safer driving** — a menu opened while you drive with a game controller stops the mower (it kept the last push), a stop lost on a bad connection is sent again as soon as the connection is back, and when the blades cannot be stopped because the mower is unreachable you are told (the stop keeps being sent).
+- **Auto should stay on WiFi** unless your own rule (dropped frames or signal, ⚙ → Camera) says leave — no more switching to 4G every half minute.
+- **Only errors in the middle of the screen** — what the camera is doing shows on its status line; a stop that could not reach the mower is shown and says it may still be moving.
+- **The camera no longer stops at "Camera link closed"** — it retries at once and says why; a mower that is not answering, or another app on your account, is said on the Remote.
+- **Banners, pop-ups and the away-from-home status in your language**, the arrow keys only drive, a controller's deck buttons show a height only once the mower accepts it, every WiFi picture starts clean, and security patches.
 
 
 ## ☕ Donations
@@ -18,15 +20,13 @@ Lymow Remote is free and always will be — donations are appreciated, never exp
 
 ## Install
 
-- **Windows:** `LymowRemoteSetup-v1.1.1.msi`
-- **Ubuntu / Linux:** `lymow-remote-ubuntu-v1.1.1.tar.gz`
-- **macOS:** `lymow-remote-mac-v1.1.1.tar.gz`
-- **Docker:** `lymow-remote-docker-v1.1.1.tar.gz`, or the image `ghcr.io/appguy77/lymow-remote:1.1.1` (also `appguy77/lymow-remote` on Docker Hub)
+- **Windows:** `LymowRemoteSetup-v1.1.3.msi`
+- **Ubuntu / Linux:** `lymow-remote-ubuntu-v1.1.3.tar.gz`
+- **macOS:** `lymow-remote-mac-v1.1.3.tar.gz`
+- **Docker:** `lymow-remote-docker-v1.1.3.tar.gz`, or the image `ghcr.io/appguy77/lymow-remote:1.1.3` (also `appguy77/lymow-remote` on Docker Hub)
 - **Home Assistant:** add `https://github.com/AppGuy77/lymow-remote-downloads` to the Add-on Store's repositories, then install **Lymow Remote**.
 
 Already installed? Press **Install update** in ⚙ → Updates.
-
-Pair the controller in your device's Bluetooth settings first; it shows Connected in ⚙ once you press a button on it.
 
 Lymow Remote installs next to the Lymow Toolkit on the same computer without clashing (its own ports, 8790 and up, and its own service).
 It uses one cloud connection per Lymow account, like the official app: while you drive, other apps on the account are paused.

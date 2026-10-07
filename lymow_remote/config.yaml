@@ -6,9 +6,9 @@
 #     (ingress_port: 0 — read from /addons/self/info and bound as a second socket, app/run.py), so another add-on holding
 #     8790 (Frigate, go2rtc, …) can never take the Home Assistant panel down;
 #   * NO `services: mqtt` and NO `homeassistant_api`: Lymow Remote runs no Home Assistant bridge, no notifications and
-#     no dashboards (core/product.py REMOTE_ONLY) — an add-on asks for nothing it does not use.
+#     no dashboards — an add-on asks for nothing it does not use.
 name: Lymow Remote
-version: "1.1.1"
+version: "1.1.3"
 slug: lymow_remote
 # PULL, NEVER BUILD: Supervisor pulls this prebuilt multi-arch image (and cleans up the previous one on update).
 image: "ghcr.io/appguy77/lymow-remote"
@@ -25,6 +25,7 @@ arch:
   - amd64
   - aarch64
   - armv7
+# the image brings its own init (tini as PID 1, reaping the sign-in browser's exited helpers) — never a second one
 init: false
 startup: application
 boot: auto
