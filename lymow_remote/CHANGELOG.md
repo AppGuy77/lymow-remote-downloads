@@ -1,11 +1,13 @@
-Lymow Remote v1.1.4
+Lymow Remote v1.1.5
 
-What changed since v1.1.3.
+What changed since v1.1.4.
 
 
-- **Driving resumes once the picture catches up** — after the camera picture falls behind and catches up again, the stick should drive again within about a second; on WiFi from away, a phone could stay paused for good after one hiccup.
-- **New installs on Intel Macs should work again** — a library Lymow Remote needs stopped publishing a ready-made Intel Mac version; the installer and updates now take the last one that has it.
-- **Security patches.**
+- **The deck stays where it is** — the deck slider shows the height each mower reports, and opening the Remote no longer moves the deck. With two mowers, a height set on one is never applied to the other.
+- **Auto keeps a WiFi picture that only drops frames** — it should move to 4G only when the picture freezes, and the 4G picture is up before the WiFi one goes: no black screen while it switches.
+- **A smoother camera picture** — a short hiccup no longer throws away about two seconds of video, and the screen is redrawn only where something changed.
+- **A sleeping mower is woken first** — leaving remote control and starting the 4G camera reach a mower that went to sleep; if it cannot be reached, the screen says it is still in remote control.
+- **The light, camera link and map buttons fade with the other controls again.**
 
 
 ## ☕ Donations
@@ -17,10 +19,10 @@ Lymow Remote is free and always will be — donations are appreciated, never exp
 
 ## Install
 
-- **Windows:** `LymowRemoteSetup-v1.1.4.msi`
-- **Ubuntu / Linux:** `lymow-remote-ubuntu-v1.1.4.tar.gz`
-- **macOS:** `lymow-remote-mac-v1.1.4.tar.gz`
-- **Docker:** `lymow-remote-docker-v1.1.4.tar.gz`, or the image `ghcr.io/appguy77/lymow-remote:1.1.4` (also `appguy77/lymow-remote` on Docker Hub)
+- **Windows:** `LymowRemoteSetup-v1.1.5.msi`
+- **Ubuntu / Linux:** `lymow-remote-ubuntu-v1.1.5.tar.gz`
+- **macOS:** `lymow-remote-mac-v1.1.5.tar.gz`
+- **Docker:** `lymow-remote-docker-v1.1.5.tar.gz`, or the image `ghcr.io/appguy77/lymow-remote:1.1.5` (also `appguy77/lymow-remote` on Docker Hub)
 - **Home Assistant:** add `https://github.com/AppGuy77/lymow-remote-downloads` to the Add-on Store's repositories, then install **Lymow Remote**.
 
 Already installed? Press **Install update** in ⚙ → Updates.
