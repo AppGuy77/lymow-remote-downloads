@@ -1,4 +1,4 @@
-Lymow Remote v1.1.5
+Lymow Remote v1.1.6
 
 What changed since v1.1.4.
 
@@ -8,6 +8,8 @@ What changed since v1.1.4.
 - **A smoother camera picture** — a short hiccup no longer throws away about two seconds of video, and the screen is redrawn only where something changed.
 - **A sleeping mower is woken first** — leaving remote control and starting the 4G camera reach a mower that went to sleep; if it cannot be reached, the screen says it is still in remote control.
 - **The light, camera link and map buttons fade with the other controls again.**
+- **The WiFi picture no longer freezes on a damaged frame** — it should pick up again at the next full frame.
+- **Consistent wording in every language** — each language names the same thing the same way throughout.
 
 
 ## ☕ Donations
@@ -19,10 +21,10 @@ Lymow Remote is free and always will be — donations are appreciated, never exp
 
 ## Install
 
-- **Windows:** `LymowRemoteSetup-v1.1.5.msi`
-- **Ubuntu / Linux:** `lymow-remote-ubuntu-v1.1.5.tar.gz`
-- **macOS:** `lymow-remote-mac-v1.1.5.tar.gz`
-- **Docker:** `lymow-remote-docker-v1.1.5.tar.gz`, or the image `ghcr.io/appguy77/lymow-remote:1.1.5` (also `appguy77/lymow-remote` on Docker Hub)
+- **Windows:** `LymowRemoteSetup-v1.1.6.msi`
+- **Ubuntu / Linux:** `lymow-remote-ubuntu-v1.1.6.tar.gz`
+- **macOS:** `lymow-remote-mac-v1.1.6.tar.gz`
+- **Docker:** `lymow-remote-docker-v1.1.6.tar.gz`, or the image `ghcr.io/appguy77/lymow-remote:1.1.6` (also `appguy77/lymow-remote` on Docker Hub)
 - **Home Assistant:** add `https://github.com/AppGuy77/lymow-remote-downloads` to the Add-on Store's repositories, then install **Lymow Remote**.
 
 Already installed? Press **Install update** in ⚙ → Updates.
